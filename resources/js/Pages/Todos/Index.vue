@@ -80,6 +80,13 @@ function destroy(id) {
     </div>
   </div>
 
+  <!-- No Data Found -->
+  <div
+    v-if="todos.data.length === 0"
+    class="alert alert-info text-center">
+    No data found.
+  </div>
+
   <!-- PAGINATION -->
   <nav class="mt-4" v-if="todos?.data?.length > 0 && todos.links">
     <ul class="pagination justify-content-center">
