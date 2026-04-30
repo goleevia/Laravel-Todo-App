@@ -84,7 +84,7 @@ function destroy(id) {
   <div
     v-if="todos.data.length === 0"
     class="alert alert-info text-center">
-    No data found.
+    No todos available. Click "Add Todo" to create one.
   </div>
 
   <!-- PAGINATION -->
