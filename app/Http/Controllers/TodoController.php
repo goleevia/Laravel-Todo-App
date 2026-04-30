@@ -13,7 +13,7 @@ class TodoController extends Controller
     public function index()
     {
         return Inertia::render('Todos/Index', [
-            'todos' => Todo::latest()->paginate(10)
+            'todos' => Todo::latest()->paginate(5)
         ]);
     }
 
@@ -47,7 +47,6 @@ class TodoController extends Controller
     {
         $todo->delete();
 
-        return redirect()->route('todos.index')
-            ->with('success', 'Todo deleted successfully');
+        return redirect()->route('todos.index')->with('success', 'Todo deleted successfully');
     }
 }

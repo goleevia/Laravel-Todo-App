@@ -81,7 +81,7 @@ function destroy(id) {
   </div>
 
   <!-- PAGINATION -->
-  <nav class="mt-4">
+  <nav class="mt-4" v-if="todos?.data?.length > 0 && todos.links">
     <ul class="pagination justify-content-center">
 
       <li
